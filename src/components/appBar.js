@@ -9,6 +9,7 @@ import Menu from '@material-ui/core/Menu';
 import companyIcon from './../icons/company.svg';
 import { withStyles, Typography } from '@material-ui/core';
 import PropTypes from 'prop-types';
+import Sidebar from './sidebar';
 
 const styles = theme => ({
   root: {
@@ -43,12 +44,21 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'none'
     }
+  },
+  gap: {
+    backgroundColor: '#002984',
+    display: 'block',
+    height: 24,
+    [theme.breakpoints.up('sm')]: {
+      display: 'none'
+    }
   }
 });
 
 export class CustomAppBar extends Component {
   state = {
-    anchorEl: null
+    anchorEl: null,
+    isSidebarOpened: false
   };
 
   handleMenu = event => {
@@ -58,15 +68,22 @@ export class CustomAppBar extends Component {
   handleClose = () => {
     this.setState({ anchorEl: null });
   };
+
+  toggleSidebar = open => () => {
+    this.setState({ isSidebarOpened: open });
+  }
+
   render() {
     const { classes, location } = this.props;
-    const { anchorEl } = this.state;
+    const { anchorEl, isSidebarOpened } = this.state;
     const open = Boolean(anchorEl);
     return (
       <div>
         <AppBar position="static">
+          <div className={classes.gap}>
+          </div>
           <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
+            <IconButton className={classes.menuButton} color="inherit" aria-label="Menu" onClick={this.toggleSidebar(true)}>
               <MenuIcon />
             </IconButton>
             <div className={classes.companyIconWrapper}>
@@ -105,6 +122,7 @@ export class CustomAppBar extends Component {
               </Menu>
             </div>
           </Toolbar>
+          <Sidebar open={isSidebarOpened} onClose={this.toggleSidebar(false)}/>
         </AppBar>
       </div>
     )
