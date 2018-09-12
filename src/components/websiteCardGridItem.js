@@ -92,6 +92,7 @@ class WebsiteCard extends React.Component {
     return (
       <Card className={classes.card}>
         <Button className={classes.media} classes={{root: classes.buttonRoot}}>
+          <div className={classes.imageLayer} />
           <img alt='edit' src={editIcon} className={classes.editIcon}/>
         </Button>
         <CardContent className={classes.cardContent}>
