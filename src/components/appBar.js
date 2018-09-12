@@ -28,7 +28,7 @@ const styles = theme => ({
   accountIcon: {
     fontSize: 24,
     [theme.breakpoints.up('sm')]: {
-      fontSize: 32
+      fontSize: 38
     }
   },
   companyIconWrapper: {
