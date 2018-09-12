@@ -19,6 +19,19 @@ const styles = theme => ({
     height: 336,
     display: 'flex',
     flexFlow: 'column',
+    boxShadow: 'none',
+    filter: `
+      drop-shadow(0 1px 5px rgba(0,0,0,.2))
+      drop-shadow(0  3px 4px rgba(0,0,0,.12))
+      drop-shadow(0 0 4px rgba(0,0,0,.14))
+    `,
+    '&:hover': {
+      filter: `
+        drop-shadow(0px 4px 15px rgba(0,0,0,.2))
+        drop-shadow(0px 3px 14px rgba(0,0,0,.12))
+        drop-shadow(0px 8px 10px rgba(0,0,0,.14))
+      `
+    },
     '&:hover $imageLayer': {
       display: 'block'
     },
@@ -30,9 +43,6 @@ const styles = theme => ({
     height: 168,
     position: 'relative',
     cursor: 'pointer'
-  },
-  mediaRoot: {
-    backgroundPosition: 'top'
   },
   cardContent: {
     flex: '1 1'
