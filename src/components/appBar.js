@@ -26,7 +26,7 @@ const styles = theme => ({
     }
   },
   accountIcon: {
-    fontSize: 20,
+    fontSize: 24,
     [theme.breakpoints.up('sm')]: {
       fontSize: 32
     }
