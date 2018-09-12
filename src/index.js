@@ -24,8 +24,11 @@ const theme = createMuiTheme({
       return this.cardWidth + this.cardMargin * 2;
     },
     // returns minimal width to draw desirable number of cards per row
-    cardsBreakpointWidth (numberOfCards) {
+    cardsBreakpointWidth(numberOfCards) {
       return this.totalCardWidth() * numberOfCards + this.cardWrapperMargin * 2 -this.cardMargin * 2;
+    },
+    cardsContainerWidth(numberOfCards) {
+      return (this.cardWidth + this.cardMargin * 2) * numberOfCards;
     },
     editIconSize: 30,
   }

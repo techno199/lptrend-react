@@ -19,13 +19,13 @@ const styles = theme => ({
   websitesWrapper: {
     marginBottom: 92,
     [theme.breakpoints.up('sm')]: {
-      width: (theme.shape.cardWidth + theme.shape.cardMargin * 2) * 2
+      width: theme.shape.cardsContainerWidth(2)
     },
     [theme.breakpoints.up(theme.shape.cardsBreakpointWidth(3))]: {
-      width: (theme.shape.cardWidth + theme.shape.cardMargin * 2) * 3
+      width: theme.shape.cardsContainerWidth(3)
     },
     [theme.breakpoints.up(theme.shape.cardsBreakpointWidth(4))]: {
-      width: (theme.shape.cardWidth + theme.shape.cardMargin * 2) * 4
+      width: theme.shape.cardsContainerWidth(4)
     }
   },
   websitesOuterWrapper: {

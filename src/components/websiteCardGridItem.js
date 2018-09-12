@@ -3,15 +3,12 @@ import { withStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import cardImg from './../img/cardImg.jpg';
 import DeleteIcon from '@material-ui/icons/Delete'
 import { IconButton } from '@material-ui/core';
 import editIcon from '../icons/edit.svg';
-import TouchRipple from '@material-ui/core/ButtonBase/TouchRipple';
-
 const styles = theme => ({
   card: {
     width: theme.shape.cardWidth,
@@ -32,9 +29,6 @@ const styles = theme => ({
         drop-shadow(0px 8px 10px rgba(0,0,0,.14))
       `
     },
-    '&:hover $imageLayer': {
-      display: 'block'
-    },
     '&:hover $editIcon': {
       display: 'block'
     }
@@ -42,7 +36,10 @@ const styles = theme => ({
   media: {
     height: 168,
     position: 'relative',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    '&:hover $imageLayer': {
+      display: 'block'
+    }
   },
   cardContent: {
     flex: '1 1'
