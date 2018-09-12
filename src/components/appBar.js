@@ -26,7 +26,10 @@ const styles = theme => ({
     }
   },
   accountIcon: {
-    fontSize: 32
+    fontSize: 20,
+    [theme.breakpoints.up('sm')]: {
+      fontSize: 32
+    }
   },
   companyIconWrapper: {
     display: 'none',
@@ -87,7 +90,7 @@ export class CustomAppBar extends Component {
               <MenuIcon />
             </IconButton>
             <div className={classes.companyIconWrapper}>
-              <img src={companyIcon} />
+              <img alt='Company logo' src={companyIcon} />
             </div>
             <div className={classes.location}>
               <Typography variant='title' color='inherit'>

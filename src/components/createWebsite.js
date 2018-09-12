@@ -1,22 +1,9 @@
 import React, { Component } from 'react'
-import { Typography, withStyles, Grid, withWidth, Button } from '@material-ui/core';
-import WebsiteCard from './websiteCard';
-import CreateWebsiteCard from './createWebsiteCard';
+import { withStyles, Button } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import WebsiteCardsList from './websiteCardsList';
 import WebsiteCardsGrid from './websiteCardsGrid';
 import AddIcon from '@material-ui/icons/Add';
-
-const isMobile = widthType => {
-  switch (widthType) {
-    case 'xs': {
-      return true;
-    }
-    default: {
-      return false;
-    }
-  }
-}
 
 const styles = theme => ({
   title: {
@@ -49,7 +36,7 @@ const styles = theme => ({
 
 export class CreateWebsite extends Component {
   render() {
-    const { classes, location, width } = this.props
+    const { classes, location } = this.props
     return (
       <div>
         <div className={classes.desktopCards}>
@@ -70,4 +57,4 @@ CreateWebsite.propTypes = {
   location: PropTypes.string.isRequired
 }
 
-export default withWidth()(withStyles(styles)(CreateWebsite));
+export default withStyles(styles)(CreateWebsite);

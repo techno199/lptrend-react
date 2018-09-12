@@ -65,11 +65,11 @@ export class Footer extends Component {
           </Button>
         </div>
         <div className={classes.socialWrapper}>
-          <img src={vk} className={classes.social}/>
-          <img src={facebook} className={classes.social}/>
-          <img src={OK} className={classes.social} />
-          <img src={twitter} className={classes.social} />
-          <img src={gplus} className={classes.social} />
+          <img alt='vkontakte' src={vk} className={classes.social}/>
+          <img alt='facebook' src={facebook} className={classes.social}/>
+          <img alt='odnoklassniki' src={OK} className={classes.social} />
+          <img alt='twitter' src={twitter} className={classes.social} />
+          <img alt='google plus' src={gplus} className={classes.social} />
         </div>
       </div>
     )

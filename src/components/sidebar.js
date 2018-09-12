@@ -1,10 +1,7 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
 import { ListItem, ListItemText, IconButton, Typography, Grid } from '@material-ui/core';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import payments from './../icons/payments.svg';
@@ -78,19 +75,19 @@ class Sidebar extends React.Component {
             </Grid>
             <List>
               <ListItem button>
-                <img src={templates} />
+                <img alt='Templates' src={templates} />
                 <ListItemText primary='Шаблоны' />
               </ListItem>
               <ListItem button>
-                <img src={sites} />
+                <img alt='My websites' src={sites} />
                 <ListItemText primary='Мои Сайты' />
               </ListItem>
               <ListItem button>
-                <img src={settings} />
+                <img alt='Settings' src={settings} />
                 <ListItemText primary='Настройки' />
               </ListItem>
               <ListItem button>
-                <img src={payments} />
+                <img alt='Payments' src={payments} />
                 <ListItemText primary='Платежи' />
               </ListItem>   
             </List>

@@ -15,6 +15,19 @@ const theme = createMuiTheme({
     button: {
       fontSize: 13
     }
+  },
+  shape: {
+    cardWidth: 240,
+    cardMargin: 12,
+    cardWrapperMargin: 36,
+    totalCardWidth() {
+      return this.cardWidth + this.cardMargin * 2;
+    },
+    // returns minimal width to draw desirable number of cards per row
+    cardsBreakpointWidth (numberOfCards) {
+      return this.totalCardWidth() * numberOfCards + this.cardWrapperMargin * 2 -this.cardMargin * 2;
+    },
+    editIconSize: 30,
   }
 });
 

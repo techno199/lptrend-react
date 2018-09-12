@@ -13,8 +13,9 @@ const styles = theme => ({
     }
   },
   tabRoot: {
-    fontSize: 13
-  }
+    fontSize: 13,
+    minWidth: 128
+  },
 });
 
 class NavigationTabs extends React.Component {
