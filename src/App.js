@@ -9,6 +9,12 @@ import CreateWebsite from './components/createWebsite';
 const styles = {
   root: {
     flexGrow: 1,
+    display: 'flex',
+    flexFlow: 'column nowrap',
+    minHeight: '100vh'
+  },
+  mainContent: {
+    flexGrow: 1
   }
 };
 
@@ -23,7 +29,9 @@ class MenuAppBar extends React.Component {
       <div className={classes.root}>
         <AppBar location={this.state.location}/>
         <NavigationTabs />
-        <CreateWebsite location={this.state.location}/>
+        <div className={classes.mainContent}>
+          <CreateWebsite location={this.state.location}/>
+        </div>
         <Footer />
       </div>
     );
